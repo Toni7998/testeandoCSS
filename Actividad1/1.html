@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo CSS - 4 Maneras</title>
+
+    <!-- Manera 2: CSS interno en el head -->
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        /* Manera 3: Importar CSS externo dentro de un style */
+        @import url("./styles.css");
+    </style>
+
+    <!-- Manera 4: Llamada a un CSS externo con <link> -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Manera 1: Estilo en línea -->
+    <div style="color: red;">
+        Este texto tiene estilo en línea (Manera 1).
+    </div>
+
+    <h1>Este título se estiliza con CSS interno (Manera 2).</h1>
+
+    <p>Este párrafo puede recibir estilos importados con @import (Manera 3).</p>
+
+    <span>Este texto se verá afectado por el style.css externo (Manera 4).</span>
+</body>
+
+</html>
