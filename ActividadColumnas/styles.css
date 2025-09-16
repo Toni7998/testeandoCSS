@@ -1,0 +1,14 @@
+        html {
+            background-color: aqua;
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: 3px solid red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h1:hover {
+            color: white;
+        }
