@@ -1,0 +1,19 @@
+/* Ejercicio 1*/
+.caja1 {
+    width: 300px;
+    height: 100px;
+    background-color: chartreuse;
+    /* Ocultamos el desbordamiento */
+    overflow: hidden;
+}
+
+/* Ejercicio 2*/
+.caja2 {
+    width: 300px;
+    height: 100px;
+    background-color: chartreuse;
+    /* Barra para ver el texto que hay por el desbordamiento */
+    overflow-y: scroll;
+    text-align: left;
+    direction: rtl;
+}
