@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #cbe5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.caja {
+    width: 150px;
+    height: 150px;
+    background: red;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 15px dotted green;
+    outline-offset: 10px;
+    cursor: pointer;
+    transition: outline 0.3s ease, outline-color 0.3s ease;
+}
+
+/* Al pasar el ratón cambia el outline */
+.caja:hover {
+    outline: 15px dotted black;
+}
