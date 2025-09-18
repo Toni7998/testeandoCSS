@@ -1,0 +1,41 @@
+/* El título*/
+h1 {
+    text-align: center;
+    color: purple;
+    /* (0,0,0,1) */
+}
+
+/* Tabla explicativa */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+/* Definición de las tablas*/
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+/* Cabecera de la tabla*/
+thead {
+    background: #2c3e50;
+    color: #fff;
+}
+
+/* Demostración práctica de los selectores */
+.container {
+    background: lightblue;
+    padding: 1rem;
+}
+
+.container a {
+    color: green;
+}
+
+#titulo {
+    background: orange;
+}

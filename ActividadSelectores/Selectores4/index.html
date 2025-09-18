@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Selectores CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Ejercicio de Selectores CSS</h1>
+
+    <p>En esta página se muestran varios selectores y su <strong>peso (especificidad)</strong>:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Selector</th>
+                <th>Especificidad (a,b,c,d)</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>*</code></td>
+                <td>(0,0,0,0)</td>
+                <td>Selector universal (menor peso)</td>
+            </tr>
+            <tr>
+                <td><code>.container</code></td>
+                <td>(0,0,1,0)</td>
+                <td>Una clase</td>
+            </tr>
+            <tr>
+                <td><code>.container href</code></td>
+                <td>(0,0,1,1)</td>
+                <td>Una clase + un elemento</td>
+            </tr>
+            <tr>
+                <td><code>h1</code></td>
+                <td>(0,0,0,1)</td>
+                <td>Un elemento</td>
+            </tr>
+            <tr>
+                <td><code>#titulo</code></td>
+                <td>(0,1,0,0)</td>
+                <td>Un ID (más peso)</td>
+            </tr>
+            <tr>
+                <td><code>!important</code></td>
+                <td>—</td>
+                <td>No tiene especificidad propia, pero sobrescribe a los demás</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="container" id="titulo">
+        <h2>Ejemplo práctico</h2>
+        <p>Este texto está dentro de <code>.container</code> y <code>#titulo</code> para ver qué selector gana.</p>
+        <a href="#">Soy un enlace (href)</a>
+    </div>
+
+</body>
+
+</html>
