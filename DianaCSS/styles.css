@@ -1,0 +1,99 @@
+:root {
+    --size: 420px;
+    /* cambia tamaño de la diana desde aquí */
+    --rim-padding: 14px;
+    --cross-thickness: 4px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #cfe6a6;
+    /* color similar al ejemplo */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* envoltorio metálico / marco */
+.rim {
+    width: var(--size);
+    height: var(--size);
+    padding: var(--rim-padding);
+    border-radius: 50%;
+
+    /* ligero degradado y sombras para efecto metálico */
+    background: linear-gradient(145deg, #efefef 0%, #d9d9d9 45%, #f8f8f8 100%);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18),
+        inset 0 3px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -6px 12px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* superficie interna (la diana en sí) */
+.target {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+
+    /* Aros concentricos: alternancia rojo/blanco */
+    background:
+        radial-gradient(circle at center,
+            /* centro -> ajusta los % para más o menos anillos */
+            #c00 0% 8%,
+            #fff 8% 16%,
+            #c00 16% 24%,
+            #fff 24% 32%,
+            #c00 32% 40%,
+            #fff 40% 48%,
+            #c00 48% 56%,
+            #fff 56% 64%,
+            #c00 64% 72%,
+            #fff 72% 80%,
+            #c00 80% 88%,
+            #fff 88% 100%);
+
+    /* suave borde interior blanco (espacio entre marco y aros) */
+    box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.9),
+        inset 0 0 18px rgba(0, 0, 0, 0.06);
+
+    overflow: hidden;
+}
+
+/* líneas de cruz (ejes) */
+.target::before,
+.target::after {
+    content: "";
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    background: #000;
+    z-index: 2;
+}
+
+/* eje vertical */
+.target::before {
+    width: var(--cross-thickness);
+    height: 100%;
+    
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* eje horizontal */
+.target::after {
+    height: var(--cross-thickness);
+    width: 100%;
+    
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
